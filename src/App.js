@@ -1,10 +1,14 @@
 import React, {
   useState,
-  useEffect
+  useEffect,
+  Component,
 } from 'react';
 import PokemonList from './PokemonList'
 import axios from 'axios'
 import Pagination from './Pagination';
+import './App.css';
+
+
 
 function App() {
   const [pokemon, setPokemon] = useState([])
@@ -12,6 +16,20 @@ function App() {
   const [nextPageUrl, setNextPageUrl] = useState()
   const [prevPageUrl, setPrevPageUrl] = useState()
   const [loading, setLoading] = useState(true)
+
+class App extends Component {
+  constructor() {
+    super();
+    this.state = {};
+  }
+
+  render() {
+    return (
+    < div className = "App" >
+    </div>
+    );
+  }
+}
 
   useEffect(() => {
     setLoading(true)
@@ -53,3 +71,7 @@ function App() {
 }
 
 export default App;
+
+
+
+
